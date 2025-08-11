@@ -1,0 +1,6 @@
+@ServiceControl_HostAddress = http://localhost:5150
+
+GET {{ServiceControl_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

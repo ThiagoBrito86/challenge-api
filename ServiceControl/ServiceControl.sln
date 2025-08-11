@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceControl", "ServiceControl.csproj", "{23314930-8AEF-4BCE-911F-09431EABA91E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceControl.Domain", "..\ServiceControl.Domain\ServiceControl.Domain.csproj", "{2A312254-0BA7-4010-8CEF-5FCAF485F0CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceControl.Application", "..\ServiceControl.Application\ServiceControl.Application.csproj", "{205DFED9-5A63-4EFD-90A7-61C6B35CABB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceControl.Infrastructure", "..\ServiceControl.Infrastructure\ServiceControl.Infrastructure.csproj", "{2845B572-C6BA-4043-AE4A-BD1A0B950A65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceControl.UnitTests", "..\ServiceControl.UnitTests\ServiceControl.UnitTests.csproj", "{381C55EB-8C9D-4903-8CFA-78C5EC08EB06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceControl.IntegrationTests", "..\ServiceControl.IntegrationTests\ServiceControl.IntegrationTests.csproj", "{CA8CACC6-C949-41CD-89DB-2EF9C87CC263}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23314930-8AEF-4BCE-911F-09431EABA91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23314930-8AEF-4BCE-911F-09431EABA91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23314930-8AEF-4BCE-911F-09431EABA91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23314930-8AEF-4BCE-911F-09431EABA91E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A312254-0BA7-4010-8CEF-5FCAF485F0CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A312254-0BA7-4010-8CEF-5FCAF485F0CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A312254-0BA7-4010-8CEF-5FCAF485F0CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A312254-0BA7-4010-8CEF-5FCAF485F0CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{205DFED9-5A63-4EFD-90A7-61C6B35CABB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{205DFED9-5A63-4EFD-90A7-61C6B35CABB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{205DFED9-5A63-4EFD-90A7-61C6B35CABB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{205DFED9-5A63-4EFD-90A7-61C6B35CABB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2845B572-C6BA-4043-AE4A-BD1A0B950A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2845B572-C6BA-4043-AE4A-BD1A0B950A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2845B572-C6BA-4043-AE4A-BD1A0B950A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2845B572-C6BA-4043-AE4A-BD1A0B950A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{381C55EB-8C9D-4903-8CFA-78C5EC08EB06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381C55EB-8C9D-4903-8CFA-78C5EC08EB06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381C55EB-8C9D-4903-8CFA-78C5EC08EB06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381C55EB-8C9D-4903-8CFA-78C5EC08EB06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA8CACC6-C949-41CD-89DB-2EF9C87CC263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8CACC6-C949-41CD-89DB-2EF9C87CC263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8CACC6-C949-41CD-89DB-2EF9C87CC263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8CACC6-C949-41CD-89DB-2EF9C87CC263}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DB3A649-A7B8-4EF9-8B43-6CDB862B739F}
+	EndGlobalSection
+EndGlobal
