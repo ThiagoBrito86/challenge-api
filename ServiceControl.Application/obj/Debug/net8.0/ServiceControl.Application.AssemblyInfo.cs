@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServiceControl.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c470fa3c35eb9bb02c84254736c1a55deada1cc2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6f63e75cdb73b5514fd703dbbbab8006a6a2c2c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServiceControl.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServiceControl.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
