@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "m+Qr2mJp7dc=",
+  "dgSpecHash": "B2rVGjcKFAA=",
   "success": true,
   "projectFilePath": "C:\\Users\\Avell\\source\\repos\\ThiagoBrito86\\challenge-api\\ServiceControl.Application\\ServiceControl.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Avell\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
