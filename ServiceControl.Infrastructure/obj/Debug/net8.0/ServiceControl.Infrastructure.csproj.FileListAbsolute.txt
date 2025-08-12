@@ -1,0 +1,6 @@
+C:\Users\Avell\source\repos\ThiagoBrito86\challenge-api\ServiceControl.Infrastructure\obj\Debug\net8.0\ServiceControl.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Avell\source\repos\ThiagoBrito86\challenge-api\ServiceControl.Infrastructure\obj\Debug\net8.0\ServiceControl.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Avell\source\repos\ThiagoBrito86\challenge-api\ServiceControl.Infrastructure\obj\Debug\net8.0\ServiceControl.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Avell\source\repos\ThiagoBrito86\challenge-api\ServiceControl.Infrastructure\obj\Debug\net8.0\ServiceControl.Infrastructure.AssemblyInfo.cs
+C:\Users\Avell\source\repos\ThiagoBrito86\challenge-api\ServiceControl.Infrastructure\obj\Debug\net8.0\ServiceControl.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Avell\source\repos\ThiagoBrito86\challenge-api\ServiceControl.Infrastructure\obj\Debug\net8.0\ServiceControl.Infrastructure.sourcelink.json

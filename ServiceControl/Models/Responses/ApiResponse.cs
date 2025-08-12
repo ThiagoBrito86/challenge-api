@@ -37,4 +37,4 @@ public record MetricsResponse(
     double AverageResponseTime,
     double P95ResponseTime,
     double P99ResponseTime,
-    DateTime LastReset)
+    DateTime LastReset);

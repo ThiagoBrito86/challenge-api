@@ -1,4 +1,5 @@
 ﻿using ServiceControl.Domain.Enums;
+using ServiceControl.Domain.Exceptions;
 
 namespace ServiceControl.Domain.ValueObjects;
 
