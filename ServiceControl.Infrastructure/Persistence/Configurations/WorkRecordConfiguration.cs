@@ -53,7 +53,7 @@ public class WorkRecordConfiguration : IEntityTypeConfiguration<WorkRecord>
             });
         });
 
-        // Ignorar Domain Events (não persistir)
+        // (não persistir)
         builder.Ignore(x => x.DomainEvents);
     }
 }

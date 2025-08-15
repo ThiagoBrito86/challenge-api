@@ -1,7 +1,9 @@
 ﻿using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Polly;
 using Polly.Retry;
+using ServiceControl.Application.Exceptions;
 using ServiceControl.Domain.Intefaces.Services;
 using ServiceControl.Domain.ValueObjects;
 
@@ -10,14 +12,14 @@ namespace ServiceControl.Infrastructure.Services;
 public class OpenWeatherMapService : IWeatherService
 {
     private readonly HttpClient _httpClient;
-    private readonly IRetryPolicy _retryPolicy;
+    private readonly IAsyncPolicy<WeatherData> _retryPolicy; 
     private readonly IConfiguration _configuration;
     private readonly ILogger<OpenWeatherMapService> _logger;
     private readonly string _apiKey;
 
     public OpenWeatherMapService(
         HttpClient httpClient,
-        IRetryPolicy retryPolicy,
+        IAsyncPolicy<WeatherData> retryPolicy,
         IConfiguration configuration,
         ILogger<OpenWeatherMapService> logger)
     {
@@ -30,16 +32,16 @@ public class OpenWeatherMapService : IWeatherService
 
     public async Task<WeatherData> GetWeatherDataAsync(string city, DateTime date, CancellationToken cancellationToken = default)
     {
-        return await _retryPolicy.ExecuteAsync(async () =>
+        return await _retryPolicy.ExecuteAsync(async ct =>
         {
             try
             {
                 var url = $"weather?q={city}&appid={_apiKey}&units=metric&lang=pt_br";
-                var response = await _httpClient.GetAsync(url, cancellationToken);
+                var response = await _httpClient.GetAsync(url, ct);
 
                 response.EnsureSuccessStatusCode();
 
-                var content = await response.Content.ReadAsStringAsync(cancellationToken);
+                var content = await response.Content.ReadAsStringAsync(ct);
                 var weatherResponse = JsonSerializer.Deserialize<OpenWeatherMapResponse>(content, new JsonSerializerOptions
                 {
                     PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower

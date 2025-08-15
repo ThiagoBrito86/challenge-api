@@ -17,6 +17,10 @@ public record Temperature
         Condition = ClassifyCondition(value);
     }
 
+    protected Temperature()
+    {
+    }
+
     private static WeatherCondition ClassifyCondition(decimal temperature)
     {
         return temperature switch

@@ -8,3 +8,5 @@
 /ServiceControl/obj/Debug/net8.0
 /ServiceControl.Domain/bin/Debug/net8.0
 *.dll
+/ServiceControl.Application/bin/Debug/net8.0/ServiceControl.Application.dll
+/ServiceControl.Application/bin/Debug/net8.0/ServiceControl.Domain.dll

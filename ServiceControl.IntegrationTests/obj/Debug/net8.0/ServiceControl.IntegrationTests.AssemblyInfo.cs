@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServiceControl.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9b3153079059c55644b1cec09ae1ac935d1716c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b89a3b50055a12ad355e1db3288463f65840674")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServiceControl.IntegrationTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServiceControl.IntegrationTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

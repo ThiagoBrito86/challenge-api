@@ -7,7 +7,7 @@ public record WeatherData
     public int Humidity { get; }
     public int Pressure { get; }
     public DateTime Timestamp { get; }
-
+    
     public WeatherData(
         decimal temperature,
         string description,
@@ -19,5 +19,9 @@ public record WeatherData
         Humidity = humidity;
         Pressure = pressure;
         Timestamp = DateTime.UtcNow;
+    }
+
+    public WeatherData()
+    {
     }
 }
