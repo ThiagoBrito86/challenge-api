@@ -68,7 +68,7 @@ public class ProcessWorkRecordUseCase : IProcessWorkRecordUseCase
             var response = CreateResponseDto(savedRecord);
 
             // Enviar para ServiceB
-            await _messageBroker.SendAsync("service-b-queue", response, cancellationToken);
+            //await _messageBroker.SendAsync("service-b-queue", response, cancellationToken);
 
             _logger.LogInformation("Registro processado: {Id}", savedRecord.Id);
             return response;

@@ -6,7 +6,14 @@
     <Nullable>enable</Nullable>
 
     <IsPackable>false</IsPackable>
-    <IsTestProject>true</IsTestProject>
+    <IsTestProject>true</IsTestProject>	  
+	  <PreserveCompilationContext>true</PreserveCompilationContext>
+	  
+	  <PreserveCompilationReferences>true</PreserveCompilationReferences>
+	  
+	  <GenerateDependencyFile>true</GenerateDependencyFile>
+	  
+	  <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,5 +33,10 @@
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
-
+	<Target Name="CopyDepsFiles" AfterTargets="Build" Condition="'$(TargetFramework)' != ''">
+		<ItemGroup>
+			<DepsFilePaths Include="$(OutputPath)\*.deps.json" />
+		</ItemGroup>
+		<Copy SourceFiles="@(DepsFilePaths)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="false" OverwriteReadOnlyFiles="true" />
+	</Target>
 </Project>

@@ -5,8 +5,8 @@ namespace ServiceControl.Domain.ValueObjects;
 
 public record Temperature
 {
-    public decimal Value { get; }
-    public WeatherCondition Condition { get; }
+    public decimal? Value { get; }
+    public WeatherCondition? Condition { get; }
 
     public Temperature(decimal value)
     {

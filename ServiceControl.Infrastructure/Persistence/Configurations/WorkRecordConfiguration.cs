@@ -14,46 +14,65 @@ public class WorkRecordConfiguration : IEntityTypeConfiguration<WorkRecord>
 
         builder.Property(x => x.ExecutedService)
             .IsRequired()
-            .HasMaxLength(200);
+            .HasMaxLength(200)
+            .HasColumnName("ExecutedService"); 
 
         builder.Property(x => x.Date)
-            .IsRequired();
+            .IsRequired()
+            .HasColumnName("Date"); 
 
         builder.Property(x => x.Responsible)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(100)
+            .HasColumnName("Responsible");
 
         builder.Property(x => x.City)
             .IsRequired()
-            .HasMaxLength(100);
+            .HasMaxLength(100)
+            .HasColumnName("City");
 
         builder.Property(x => x.ProcessingTime)
-            .IsRequired();
+        .IsRequired()
+        .HasColumnName("ProcessingTime")
+        .HasConversion(
+            v => (int)((DateTimeOffset)v).ToUnixTimeSeconds(), // DateTime → INT
+            v => DateTimeOffset.FromUnixTimeSeconds(v).DateTime // INT → DateTime
+        );
 
-        // Value Object WeatherData como JSON
         builder.OwnsOne(x => x.WeatherData, weatherData =>
-        {
+        {            
             weatherData.Property(w => w.Description)
-                .HasMaxLength(100);
+                .HasColumnName("Description") 
+                .HasMaxLength(100)
+                .IsRequired(true); 
 
-            weatherData.Property(w => w.Humidity);
-            weatherData.Property(w => w.Pressure);
-            weatherData.Property(w => w.Timestamp);
+            weatherData.Property(w => w.Humidity)
+                .HasColumnName("Humidity") 
+                .IsRequired(true); 
 
-            // Value Object Temperature
+            weatherData.Property(w => w.Pressure)
+                .HasColumnName("Pressure") 
+                .IsRequired(true); 
+
+            weatherData.Property(w => w.Timestamp)
+                .HasColumnName("Timestamp") 
+                .IsRequired(true); 
+
             weatherData.OwnsOne(w => w.Temperature, temperature =>
             {
                 temperature.Property(t => t.Value)
-                    .HasColumnName("Temperature")
-                    .HasPrecision(5, 2);
+                    .HasColumnName("Temperature") 
+                    .HasPrecision(5, 2)
+                    .IsRequired(true);
 
                 temperature.Property(t => t.Condition)
-                    .HasColumnName("WeatherCondition")
-                    .HasConversion<int>();
+                    .HasColumnName("WeatherCondition") 
+                    .HasConversion<int>()
+                    .IsRequired(true);
             });
         });
 
-        // (não persistir)
+        // Ignorar Domain Events (não persistir)
         builder.Ignore(x => x.DomainEvents);
     }
 }
